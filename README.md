@@ -21,7 +21,7 @@ Notes:
 - For prettifed HTML output add `schemas_html_pretty=true` when running make:
   ```
   make schemas_html_pretty=true
-  ``
+  ```
 
 - To generate HTML output with `.html` extensions (instead of extensionless):
   ```
