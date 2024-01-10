@@ -1,0 +1,26 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/entrytype_definition"
+$id: "https://example.org/schemas/v0.1/entrytypes/structures"
+type: object
+title: "Example definition provider structure endpoint additions"
+x-optimade-definition:
+  kind: "entrytype"
+  format: "1.2"
+  version: "0.1.0"
+  name: "structures"
+  label: "structures_entrytype_exmpl"
+properties:
+  _exmpl_cell_volume:
+    $$inherit: "/properties/structures/_exmpl_cell_volume"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: true
+      query-support: "all mandatory"
+      response-level: "yes"
+
+  _exmpl_magnetic_moment:
+    $$inherit: "/properties/structures/_exmpl_magnetic_moment"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: true
+      query-support: "all mandatory"
+      response-level: "yes"

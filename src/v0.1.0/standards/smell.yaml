@@ -1,0 +1,19 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/standard_definition"
+$id: "https://example.org/schemas/v0.1/standards/smell"
+title: "Definition provider smell standard"
+description: "Definition provider smell standard"
+x-optimade-definition:
+  label: "smell_standard"
+  kind: "standard"
+  format: "1.2"
+  version: "0.1.0"
+  name: "smell"
+entrytypes:
+  structures:
+    $$inherit: "/entrytypes/structures"
+    x-optimade-requirements:
+      support: "must"
+  smell:
+    $$inherit: "/entrytypes/smell"
+    x-optimade-requirements:
+      support: "may"

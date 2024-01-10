@@ -1,0 +1,19 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/smell/_exmpl_smell"
+title: "Material smell"
+$comment: "This is an example of a database provider-specific property definition."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_exmpl_smell"
+  label: "_exmpl_smell_smell"
+type:
+  - "string"
+  - "null"
+description: |-
+  A string describing how a material smells
+examples:
+  - "icky"
+x-optimade-unit: "inapplicable"

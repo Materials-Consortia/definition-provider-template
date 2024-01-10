@@ -1,0 +1,50 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/entrytype_definition"
+$id: "https://example.org/schemas/v0.1/entrytypes/smell"
+type: object
+title: "Example definition provider smell entrytype"
+x-optimade-definition:
+  kind: "entrytype"
+  format: "1.2"
+  version: "0.1.0"
+  name: "smell"
+  label: "smell_entrytype_exmpl"
+properties:
+  id:
+    $$inherit: "/defs/v1.2/properties/core/id"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: true
+      query-support: "all mandatory"
+      response-level: "always"
+
+  type:
+    $$inherit: "/defs/v1.2/properties/core/type"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: true
+      query-support: "all mandatory"
+      response-level: "always"
+
+  immutable_id:
+    $$inherit: "/defs/v1.2/properties/core/immutable_id"
+    x-optimade-implementation:
+      support: "no"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "no"
+
+  last_modified:
+    $$inherit: "/defs/v1.2/properties/core/last_modified"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "yes"
+
+  smell:
+    $$inherit: "/properties/smell/_exmpl_smell"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: false
+      query-support: "none"
+      response-level: "yes"

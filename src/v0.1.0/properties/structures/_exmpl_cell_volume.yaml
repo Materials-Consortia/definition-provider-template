@@ -1,0 +1,22 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/structures/_exmpl_cell_volume"
+title: "Cell volume"
+$comment: "This is an example of a definition-provider property definition."
+x-optimade-type: "float"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_exmpl_cell_volume"
+  label: "_exmpl_cell_volume_structures"
+x-optimade-unit-definitions:
+  - $$inherit: "/defs/v1.2/units/si/general/angstrom"
+type:
+  - "number"
+  - "null"
+description: |-
+  The volume of the unit cell in in ångström cubed (Å³).
+examples:
+  - 42.0
+x-optimade-unit: "angstrom^3"
+minimum: 0.0
