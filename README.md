@@ -6,6 +6,10 @@ Template repository for definition providers.
    ```
    git clone --recurse-submodules https://github.com/Materials-Consortia/definition-provider-template.git
    ```
+   Or, if you have already cloned this repo without the submodules, init them with:
+   ```
+   git submodule update --init --recursive
+   ```
 
 2. Modify schemas in `src/`.
 

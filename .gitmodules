@@ -1,3 +1,6 @@
 [submodule "tools/optimade-property-tools"]
-	path = tools/optimade-property-tools
+	path = dependencies/submodules/optimade-property-tools
 	url = https://github.com/Materials-Consortia/optimade-property-tools.git
+[submodule "dependencies/submodules/schemas"]
+	path = dependencies/submodules/schemas
+	url = https://github.com/Materials-Consortia/schemas

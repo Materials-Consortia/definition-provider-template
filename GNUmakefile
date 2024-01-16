@@ -8,19 +8,30 @@
 .PHONY: all
 all: schemas
 
-# You may need to edit these configuration options
+###############################
+# Basic configuration options #
+###############################
+
 # Path to the process_schemas program
-PROCESS_SCHEMAS=tools/optimade-property-tools/bin/process_schemas
-# Path to the OPTIMADE specification schemas folder
-OPTIMADE_SCHEMAS_DIR=../OPTIMADE/schemas/output
+PROCESS_SCHEMAS=dependencies/submodules/optimade-property-tools/bin/process_schemas
 # The base of the URI for the generated property definitions
 BASEID=https://example.org/schemas/v0.1/
 # The versioned directory being processed
 BASEDIR=src/v0.1.0
+# The versions of the meta-schemas to use
+META_SCHEMA_VER=v1.2
 
-# You probably do not need to edit these
-META_SCHEMA_PATH=$(OPTIMADE_SCHEMAS_DIR)/meta/v1.2
+#################################
+# Advanced configuation options #
+#################################
+
+# Path to the OPTIMADE schemas repo
+OPTIMADE_SCHEMAS_DIR=dependencies/submodules/schemas
+# Path to the meta-schemas to use
+META_SCHEMA_PATH=$(OPTIMADE_SCHEMAS_DIR)/meta/$(META_SCHEMA_VER)
+# Add the OPTIMADE schemas repo as a path relative to which resolve $$inherit
 RESOLVE_PATHS_ARGS=--resolve-path $(OPTIMADE_SCHEMAS_DIR)
+
 
 ifeq ($(origin schemas_html_pretty), undefined)
 	OPTIMADE_HTML_HEADER ?=
@@ -42,7 +53,7 @@ else
 	SCHEMAS_HTML_EXT = .html
 endif
 
-EXT_SCHEMAS := $(filter-out tools/optimade-property-tools/external/json-schema/LICENSE, $(wildcard tools/optimade-property-tools/external/json-schema/*))
+EXT_SCHEMAS := $(filter-out dependencies/submodules/optimade-property-tools/external/json-schema/LICENSE, $(wildcard dependencies/submodules/optimade-property-tools/external/json-schema/*))
 EXT_SCHEMAS_ARGS := $(foreach schema,$(EXT_SCHEMAS),--schema $(schema))
 
 META_SCHEMAS_JSON := $(wildcard $(META_SCHEMA_PATH)/optimade/*.json)
