@@ -22,7 +22,7 @@ Template repository for definition providers.
 
 Notes:
 
-- For prettifed HTML output add `schemas_html_pretty=true` when running make:
+- For prettified HTML output add `schemas_html_pretty=true` when running make:
   ```
   make schemas_html_pretty=true
   ```
