@@ -11,11 +11,19 @@ Template repository for definition providers.
    git submodule update --init --recursive
    ```
 
-2. Modify schemas in `src/`.
+2. Set up and activate a virtual environment for the optimade-property-tools dependencies:
 
-3. Run make.
+   ```
+   python3 -m venv venv
+   venv/bin/pip3 install -r dependencies/submodules/optimade-property-tools/requirements.txt
+   source venv/bin/activate
+   ```
 
-4. Output appears in `output/`, check the standards document with, e.g.:
+3. Modify schemas in `src/`.
+
+4. Run make.
+
+5. Output appears in `output/`, check the standards document with, e.g.:
    ```
    firefox output/v0.1.0/standards/smell
    ```
