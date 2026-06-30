@@ -28,6 +28,14 @@ Template repository for definition providers.
    firefox output/v0.1.0/standards/smell
    ```
 
+Alternatively, you can build the property definitions using Docker/Podman, e.g.:
+```
+mkdir -p output
+docker run --rm \
+  -v "$PWD/output:/opt/definition-provider-template/output" \
+  definition-provider-template
+```
+
 Notes:
 
 - For prettified HTML output add `schemas_html_pretty=true` when running make:
