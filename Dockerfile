@@ -27,4 +27,4 @@ RUN python -m venv "${VIRTUAL_ENV}" \
     && pip install --no-cache-dir \
         -r dependencies/submodules/optimade-property-tools/requirements.txt
 
-CMD ["make"]
+CMD ["bash", "-lc", "source /opt/venv/bin/activate && make"]
